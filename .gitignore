@@ -1,0 +1,47 @@
+# Compiled output
+/dist
+/out-tsc
+/.angular
+
+# Node dependencies
+/node_modules
+/package-lock.json
+/npm-debug.log*
+/yarn.lock
+/pnpm-lock.yaml
+
+# IDE and editor settings
+/.vscode/
+/.idea/
+/*.suo
+/*.ntvs*
+/*.njsproj
+/*.sln
+/*.sw?
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+/.env
+/.env.local
+/.env.*.local
+
+# Angular cache files
+/.angular/cache/
+/.angular/local/
+
+# Testing logs and coverage
+/coverage
+/test-results
+/junit.xml
+/karma-results
+
+# Compiled TypeScript
+*.d.ts
+*.js.map
+
+# Logs and debugging files
+*.log
+.npm/
