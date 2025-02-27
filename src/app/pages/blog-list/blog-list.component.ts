@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-list',
-  imports: [],
   templateUrl: './blog-list.component.html',
-  styleUrl: './blog-list.component.css'
+  styleUrls: ['./blog-list.component.css']
 })
-export class BlogListComponent {
+export class BlogListComponent implements OnInit {
+  posts: any[] = [];
 
+  constructor(private blogService: BlogService) {}
+
+  ngOnInit(): void {
+    this.blogService.getPosts().subscribe((data) => {
+      this.posts = data;
+    });
+  }
 }

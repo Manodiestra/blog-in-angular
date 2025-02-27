@@ -4,6 +4,18 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
+For a mock JSON server install
+
+```bash
+npm install -g json-server
+```
+
+Run the mock server
+
+```bash
+json-server --watch db.json --port 3000
+```
+
 To start a local development server, run:
 
 ```bash
