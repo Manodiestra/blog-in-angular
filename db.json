@@ -1,6 +1,19 @@
 {
   "posts": [
-    { "id": 1, "title": "First Blog", "content": "This is my first blog post!" },
-    { "id": 2, "title": "Angular Basics", "content": "Understanding components, directives, and services." }
+    {
+      "id": "1",
+      "title": "First Blog",
+      "content": "This is my first blog post!"
+    },
+    {
+      "id": "2",
+      "title": "Angular Basics",
+      "content": "Understanding components, directives, and services."
+    },
+    {
+      "id": "b11c",
+      "title": "A Midnight Stroll",
+      "content": "I took a midnight stroll through the text editor. My step was chill."
+    }
   ]
 }

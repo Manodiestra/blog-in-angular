@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface BlogPost {
-  id: number;
+  id?: number;
   title: string;
   content: string;
 }
@@ -20,7 +20,19 @@ export class BlogService {
     return this.http.get<BlogPost[]>(this.apiUrl);
   }
 
-  getPostById(id: string) {
-    return this.http.get(`http://localhost:3000/posts/${id}`);
-  }  
+  getPostById(id: string): Observable<BlogPost> {
+    return this.http.get<BlogPost>(`${this.apiUrl}/${id}`);
+  }
+
+  createPost(post: BlogPost): Observable<BlogPost> {
+    return this.http.post<BlogPost>(this.apiUrl, post);
+  }
+
+  updatePost(id: string, post: BlogPost): Observable<BlogPost> {
+    return this.http.put<BlogPost>(`${this.apiUrl}/${id}`, post);
+  }
+
+  deletePost(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
 }

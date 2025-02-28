@@ -7,7 +7,7 @@ import { BlogService } from '../../services/blog.service';
 @Component({
   selector: 'app-blog-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule], // ✅ Add RouterModule
+  imports: [CommonModule, RouterModule],
   templateUrl: './blog-detail.component.html',
   styleUrls: ['./blog-detail.component.css']
 })
