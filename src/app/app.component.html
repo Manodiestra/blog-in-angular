@@ -1,7 +1,9 @@
-<h1>Blog Post Manager</h1>
-<nav>
-  <a routerLink="/">Home</a> |
-  <a routerLink="/blogs">All Blogs</a> |
-  <a routerLink="/add">Create Blog</a>
-</nav>
+<mat-toolbar color="primary">
+  <span>Blog Post Manager</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/">Home</a>
+  <a mat-button routerLink="/blogs">All Blogs</a>
+  <a mat-button routerLink="/add">Create Blog</a>
+</mat-toolbar>
+
 <router-outlet></router-outlet>

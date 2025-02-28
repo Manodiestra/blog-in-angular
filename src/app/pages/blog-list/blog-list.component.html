@@ -1,6 +1,10 @@
 <h2>Blog Posts</h2>
-<ul>
-  <li *ngFor="let post of posts">
-    <a [routerLink]="['/blogs', post.id]">{{ post.title }}</a>
-  </li>
-</ul>
+<mat-list>
+  <mat-card *ngFor="let post of posts" class="blog-card">
+    <mat-card-title>{{ post.title }}</mat-card-title>
+    <mat-card-content>{{ post.content | slice:0:100 }}...</mat-card-content>
+    <mat-card-actions>
+      <a mat-button color="primary" [routerLink]="['/blogs', post.id]">Read More</a>
+    </mat-card-actions>
+  </mat-card>
+</mat-list>

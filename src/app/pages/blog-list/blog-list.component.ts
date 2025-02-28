@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-blog-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  selector: 'app-blog-list',
+  imports: [CommonModule, RouterModule, MatListModule, MatCardModule, MatButtonModule],
   templateUrl: './blog-list.component.html',
   styleUrls: ['./blog-list.component.css']
 })
