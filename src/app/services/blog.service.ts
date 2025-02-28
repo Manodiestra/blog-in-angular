@@ -19,4 +19,8 @@ export class BlogService {
   getPosts(): Observable<BlogPost[]> {
     return this.http.get<BlogPost[]>(this.apiUrl);
   }
+
+  getPostById(id: string) {
+    return this.http.get(`http://localhost:3000/posts/${id}`);
+  }  
 }
