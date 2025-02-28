@@ -1,0 +1,9 @@
+.blog-detail-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 16px;
+}
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}

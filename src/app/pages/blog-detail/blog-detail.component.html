@@ -1,8 +1,18 @@
-<h2>{{ post?.title }}</h2>
-<p>{{ post?.content }}</p>
+<mat-card class="blog-detail-card">
+  <mat-card-header>
+    <mat-card-title>{{ post?.title }}</mat-card-title>
+  </mat-card-header>
 
-<a [routerLink]="['/edit', post?.id]">
-  <button>Edit Post</button>
-</a>
+  <mat-card-content>
+    <p>{{ post?.content }}</p>
+  </mat-card-content>
 
-<a routerLink="/blogs">Back to List</a>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/edit', post?.id]">
+      Edit Post
+    </button>
+    <button mat-stroked-button color="accent" routerLink="/blogs">
+      Back to List
+    </button>
+  </mat-card-actions>
+</mat-card>
